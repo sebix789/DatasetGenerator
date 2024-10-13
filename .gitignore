@@ -13,6 +13,24 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Virtual environment
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
 # Mono auto generated files
 mono_crash.*
 
