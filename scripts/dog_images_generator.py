@@ -46,14 +46,21 @@ def dog_images_download(breed_name, file_path, number=10):
             print(f"Failed to download image {i + 1} for {breed_name}: {e}")
             
             
-# Load dataste labels
-dataset, info = tfds.load("stanford_dogs", with_info=True)
-labels = info.features["label"].names
+# # Load dataste labels
+# dataset, info = tfds.load("stanford_dogs", with_info=True)
+# labels = info.features["label"].names
     
-file_path=os.getenv("FILE_PATH")
+# file_path=os.getenv("FILE_PATH")
     
     
-# Iteration over all lables in stanford dogs dataset
-for breed in labels:
-    formatted_breed = breed.split("-")[1]
-    dog_images_download(formatted_breed, file_path)
+# # Iteration over all lables in stanford dogs dataset
+# for breed in labels:
+#     formatted_breed = breed.split("-")[1]
+#     dog_images_download(formatted_breed, file_path)
+    
+    
+def download_by_breed_name(breed_name):
+    file_path = os.getenv("TEST")
+    dog_images_download(breed_name, file_path, number=10)
+    
+download_by_breed_name("soft-coated_wheaten_terrier")
